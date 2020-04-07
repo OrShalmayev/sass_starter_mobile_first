@@ -1,0 +1,128 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@mixin backgroundDefault {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- xs
+- sm
+- md
+- lg
+- xl
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+
+@mixin respond($breakpoint) {
+
+    // Small devices (Phones, 375px and less) 
+    @if $breakpoint == xxs {
+        @media only screen and (min-width:23.4375em) {@content};// screen is >= 375px / 16px = 23.4375
+    }
+    // Small devices (Phones, 576px and less) 
+    @if $breakpoint == xs {
+        @media only screen and (min-width: 36.125em) { @content };// screen is >= 576px / 16px = 36em
+    }
+    // Small devices (tablets, 767px and less) 
+    @if $breakpoint == sm {
+        @media only screen and (min-width: 48em) { @content };//screen is >= 768px / 16px = 47.93em
+    }
+    // Medium devices (desktops, 992px and less) 
+    @if $breakpoint == md {
+        @media only screen and (min-width: 62em) { @content };//screen is >= 992px / 16px = 62em
+    }
+    // Large devices (large desktops, 1200px and less) 
+    @if $breakpoint == lg {
+        @media only screen and (min-width: 75em) { @content };//screen is >= 1200px / 16px = 75em
+    }
+    // Large devices (Laptops,   1024px - 1440px) 
+    @if $breakpoint == laptops {
+        @media only screen and (min-width: 64em) and (max-width: 90em) { @content };//screen is > 1024px and < 1440px / 16px = 90em
+    }
+    // Large devices (large desktops, 1800px and up) 
+    @if $breakpoint == xl {
+        @media only screen and (min-width: 112.5em) { @content };//screen is <= 1200px / 16px = 75em
+    }
+
+    // ----------- iPad Pro ----------- 
+    @if $breakpoint == ipad-pro-portrait-landscape {
+        // Portrait and Landscape 
+        @media only screen 
+        and (min-width: 1024px) 
+        and (max-height: 1366px) 
+        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+    }
+    @if $breakpoint == ipad-pro-portrait {
+        // Portrait 
+        @media only screen 
+        and (min-width: 1024px) 
+        and (max-height: 1366px) 
+        and (orientation: portrait) 
+        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+   }
+
+   @if $breakpoint == ipad-pro-landscape {
+        // Landscape 
+        @media only screen 
+        and (min-width: 1024px) 
+        and (max-height: 1366px) 
+        and (orientation: landscape) 
+        and (-webkit-min-device-pixel-ratio: 1.5) {@content};
+   }
+
+}//END respond
+
+// @mixin respond($breakpoint) {
+
+//     @if $breakpoint == xs {
+//         @media only screen and (max-width: 31.25em) { @content };    // 500px / 16px = 31.25em
+//     }
+//     @if $breakpoint == sm {
+//         @media only screen and (max-width: 37.5em) { @content };     //600px / 16px = 37.5em
+//     }
+//     @if $breakpoint == md {
+//         @media only screen and (max-width: 56.25em) { @content };    //900px / 16px = 56.25em
+//     }
+//     @if $breakpoint == lg {
+//         @media only screen and (max-width: 68.75em) { @content };    //1100px / 16px = 68.75em
+//     }
+//     @if $breakpoint == xl {
+//         @media only screen and (min-width: 75) { @content };    //1200px / 16px = 75em
+//     }
+// }

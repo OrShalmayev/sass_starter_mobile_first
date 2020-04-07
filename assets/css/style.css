@@ -1,0 +1,287 @@
+/* ABSTRACTS
+================================================> */
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- xs
+- sm
+- md
+- lg
+- xl
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+:root {
+  --color-one: #d8531e;
+  --color-two: #e6a514;
+  --color-three: #00512f;
+  --color-four: #000000;
+  --color-five: #ffffff;
+  --color-six: #f7f7f7; }
+
+/* BASE
+================================================> */
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* Small devices (Phones, 375px and less) */
+  /* Small devices (Phones, 576px and less) */
+  /* Small devices (tablets, 767px and less) */
+  /* Medium devices (desktops, 992px and less) */
+  /* Large devices (large desktops, 1200px and less) */
+  /* Large devices (Laptops,   1024px - 1440px) */
+  /* Large devices (large desktops, 1800px and up) */
+  /* ----------- iPad Pro ----------- */
+  /* Small devices (Phones, 375px and less) */
+  /* Small devices (Phones, 576px and less) */
+  /* Small devices (tablets, 767px and less) */
+  /* Medium devices (desktops, 992px and less) */
+  /* Large devices (large desktops, 1200px and less) */
+  /* Large devices (Laptops,   1024px - 1440px) */
+  /* Large devices (large desktops, 1800px and up) */
+  /* ----------- iPad Pro ----------- */ }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 62em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1; }
+
+/* STAG
+================================================> */
+/*-------------------- 
+        article-paragraph
+-----------------*/
+.article-paragraph {
+  margin-top: 35px;
+  font-size: 2rem;
+  color: var(--color-6); }
+
+/*-------------------- 
+        disclaimer
+-----------------*/
+.disclaimer {
+  font-size: var(--disclaimer-text);
+  color: var(--color-6); }
+  .disclaimer__link {
+    color: inherit;
+    text-decoration: none; }
+    .disclaimer__link:hover {
+      text-decoration: underline; }
+  .disclaimer--2 {
+    color: var(--color-1); }
+
+/* COMPONENTS
+================================================> */
+/*-------------------- 
+    Anchors
+-----------------*/
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  -ms-transition: color .2s ease-in-out;
+  -moz-transition: color .2s ease-in-out;
+  -webkit-transition: color .2s ease-in-out; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none; }
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0; }
+
+/*-------------------- 
+    container
+-----------------*/
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; } }
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1240px; } }
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+/*-------------------- 
+    FORM
+-----------------*/
+.form-group {
+  margin-bottom: 1rem; }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1rem + 2px);
+  padding: 2.3rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  font-weight: 400;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none; } }
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0; }
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1; }
+
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1; }
+
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1; }
+
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1; }
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1; }
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1; }
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+
+/* LAYOUT
+================================================> */
+.footer__bottom {
+  min-height: 200px;
+  background-color: #000;
+  color: var(--color-1);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+  .footer__bottom__row {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .footer__bottom__powered-by {
+    display: flex;
+    justify-content: space-evenly; }
+  .footer__bottom__university-logo-img {
+    max-width: 100px;
+    width: 100px; }
+  .footer__bottom__hackeru-logo-img {
+    max-width: 60px;
+    width: 60px; }
+  .footer__bottom__privacy-link {
+    color: #fff;
+    text-decoration: underline; }
+
+/* PAGES
+================================================> */

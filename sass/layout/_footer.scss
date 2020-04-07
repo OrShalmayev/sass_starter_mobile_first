@@ -1,0 +1,47 @@
+.footer{
+
+    // footer__bottom
+    &__bottom {
+        min-height: 200px;
+        background-color: #000;
+        color: var(--color-1);
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        // footer__bottom__row
+        &__row {
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+
+        //END footer__bottom__row
+
+        // footer_bottom__powered-by
+        &__powered-by {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &__university-logo-img {
+            max-width: 100px;
+            width: 100px;
+        }
+
+        // hackeru-logo-img
+        &__hackeru-logo-img {
+            max-width: 60px;
+            width: 60px;
+        }
+
+        // privacy-link
+        &__privacy-link {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }//END footer__bottom
+}//END footer

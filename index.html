@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- DYNAMIC CSS -->
+    <style>
+        /*-------------------- 
+            Fonts To Be Imported
+        -----------------*/
+        @font-face {
+            src: url('assets/fonts/source_sans_pro/SourceSansPro-Regular.ttf');
+            font-family: 'SourceSansPro-Regular';
+            font-weight: 400;
+        }
+
+        @font-face {
+            src: url('assets/fonts/source_sans_pro/SourceSansPro-LightItalic.ttf');
+            font-family: 'SourceSansPro-LightItalic';
+            font-weight: 900;
+        }
+
+        @font-face {
+            src: url('assets/fonts/source_sans_pro/SourceSansPro-Bold.ttf');
+            font-family: 'SourceSansPro-Bold';
+            font-weight: 900;
+        }
+
+        @font-face {
+            src: url('assets/fonts/source_sans_pro/SourceSansPro-Light.ttf');
+            font-family: 'SourceSansPro-Light';
+            font-weight: 300;
+        }
+
+        /*-------------------- 
+            Root CSS Variables
+        -----------------*/
+        :root {
+            /* BreakPoints */
+            --sm: 576px;
+            /* Small Phone */
+            --md: 768px;
+            /* large Phone */
+            --lg: 992px;
+            /* tablet  */
+            --xl: 1200px;
+            /* ipad pro  */
+            /* DEFAULT COLORS */
+            --lightgray: #D3D3D3;
+
+            /* COLORS */
+            --color-1: #fff;
+            --color-2: #e00e20;
+            --color-3: #232636;
+            --color-4: #689ad1;
+            --color-5: #ebebeb;
+            --color-6: #000;
+            --color-7: #751143;
+            --gradient: linear-gradient(4deg, rgba(117, 17, 67, 1) 10%, rgba(224, 14, 32, 1) 100%);
+
+            /*FONTS */
+            --font-light-italic: 'SourceSansPro-LightItalic', sans-serif;
+            --font-regular: 'SourceSansPro-Regular', sans-serif;
+            --font-bold: 'SourceSansPro-Bold', sans-serif;
+            --font-light: 'SourceSansPro-Light', sans-serif;
+            /* Font Sizes */
+            /* Default Sizes */
+            --btn-text: 15px;
+            --disclaimer-text: 13px;
+
+            /* Ipad Pro Font sizes (lg = 9px) */
+            --md-headline: 65px;
+            /* 65px / 9px */
+            --md-sub-headline: 40px;
+            /* 40px / 9px */
+            --md-article-headline: 35px;
+            /* 35px / 9px */
+            --md-article-headline--2: 25px;
+            /* 25px / 9px */
+
+            --md-article-text: 20px;
+            /*18px / 9 */
+
+            /* Phone Font sizes (md = 8px) */
+            --sm-headline: 35px;
+            /* 35px / 8px */
+            --sm-sub-headline: 23px;
+            /* 23px / 8px */
+            --sm-article-headline: 23px;
+
+            --sm-article-headline--2: 20px;
+            /* 23px / 8px */
+            --sm-article-text: 16px;
+            /*16px / 8px */
+
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<!--
+#=================FOOTER===================#
+-->
+    <footer class="footer">
+        <section class="footer__bottom">
+            <!-- footer__bottom__row -->
+            <div class="footer__bottom__row">
+                <!-- footer_bottom__powered-by -->
+                <div class="footer__bottom__powered-by">
+                    <div class="footer__bottom__university-logo"><img class="footer__bottom__university-logo-img"
+                            src="assets/img/njit-ico-WT.png" alt="university Logo"></div>
+                    <p class="footer__bottom__powered-by-text">Powered by</p>
+                    <div class="footer__bottom__hackeru-logo"><img class="footer__bottom__hackeru-logo-img"
+                            src="assets/img/hackeru-wt.png" alt="HackerU Logo"></div>
+                </div>
+                <!--END footer_bottom__powered-by -->
+
+                <!-- footer__bottom__copyright -->
+                <div class="footer__bottom__copyright">
+                    <p class="footer__bottom__copyright-text">
+                        Copyright © 2020 by New Jersey Institute of Technology
+                    </p>
+                </div>
+                <!--END footer__bottom__copyright -->
+
+                <!-- footer__bottom__privacy -->
+                <div class="footer__bottom__privacy">
+                    <a class="footer__bottom__privacy-link" href="https://www5.njit.edu/policies/privacy/"
+                        target="_blank" role="link">
+                        Privacy Policy.
+                    </a>
+                </div>
+                <!--END footer__bottom__privacy -->
+            </div>
+            <!--END footer__bottom__row -->
+        </section>
+        <!--END footer__bottom -->
+    </footer>
+</body>
+
+</html>
