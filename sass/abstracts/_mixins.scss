@@ -59,7 +59,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @if $breakpoint == xs {
         @media only screen and (min-width: 36.125em) { @content };// screen is >= 576px / 16px = 36em
     }
-    // Small devices (tablets, 767px and less) 
+    // Small devices (tablets, 768px and less) 
     @if $breakpoint == sm {
         @media only screen and (min-width: 48em) { @content };//screen is >= 768px / 16px = 47.93em
     }
