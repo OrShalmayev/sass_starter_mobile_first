@@ -12,11 +12,7 @@
     -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.3);
-    @include respond(iphone-x){
-        width: 45rem;
-        height: 52rem;
-    }
-    @include respond(phone){
+    @include respond(sm){
         width: 45rem;
         height: 52rem;
     }
@@ -49,7 +45,7 @@
 
         &-btn{
             margin-top: 4rem;
-            background: $color-one;
+            background: transparent;
             color: #fff;
             padding: 2rem;
             width: 50%;

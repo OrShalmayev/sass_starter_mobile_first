@@ -48,7 +48,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 
-
+/*-------------------- 
+        !Remember wu use media queries from small to large 
+-----------------*/
 @mixin respond($breakpoint) {
 
     // Small devices (Phones, 375px and less) 
@@ -71,9 +73,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @if $breakpoint == lg {
         @media only screen and (min-width: 75em) { @content };//screen is >= 1200px / 16px = 75em
     }
-    // Large devices (Laptops,   1024px - 1440px) 
+    // Large devices (Laptops,   1201px - 1440px) */
     @if $breakpoint == laptops {
-        @media only screen and (min-width: 64em) and (max-width: 90em) { @content };//screen is > 1024px and < 1440px / 16px = 90em
+        @media only screen and (min-width: 75.062em) and (max-width: 90em) { @content };//screen is >= 1201px and <= 1440px / 16px = 90em
     }
     // Large devices (large desktops, 1800px and up) 
     @if $breakpoint == xl {
@@ -107,7 +109,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
    }
 
 }//END respond
-
 // @mixin respond($breakpoint) {
 
 //     @if $breakpoint == xs {
